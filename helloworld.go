@@ -6,6 +6,7 @@ import (
 )
 
 func getSum(a, b int) string{
+	//because sum of a and b is integer, res is declared as int
 	res := a + b
 	return strconv.Itoa(a) + " + " + strconv.Itoa(b) +
 	" = " + strconv.Itoa(res)
