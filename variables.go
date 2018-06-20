@@ -1,24 +1,27 @@
 package main
+
 import (
 	"fmt"
-	"math/rand"
-	"math/cmplx"
 	"math"
+	"math/cmplx"
+	"math/rand"
 	"time"
 )
-func main(){
+
+func main() {
+	rand.Seed(time.Now().UTC().UnixNano())
 	var i = 0
 	power := math.Pow(10, 1.0/3.0)
 	const (
-		PI = math.Pi
-		MAXNUMBER = 256 
+		PI        = math.Pi
+		MAXNUMBER = 256
 	)
 
 	var (
-		tf			bool = false
-		maxInt	uint64 = 1<< 64 - 1
-		z				complex128 = cmplx.Sqrt(-5 + 12i)
-		f				float64 //values can remain undefined
+		tf     bool       = false
+		maxInt uint64     = 1<<64 - 1
+		z      complex128 = cmplx.Sqrt(-5 + 12i)
+		f      float64    //values can remain undefined
 	)
 	f = 123.000
 	fmt.Println(f)
@@ -31,7 +34,6 @@ func main(){
 	fmt.Printf("Type: %T Value: %v \n", z, z)
 }
 
-func randomer(max int) int{
-	rand.Seed(time.Now().UTC().UnixNano())
+func randomer(max int) int {
 	return rand.Intn(max)
 }
